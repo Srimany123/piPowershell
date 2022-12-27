@@ -19,8 +19,16 @@ if you are using this repository for installation. copy the following commands
   <pre>
     bash start</pre>
 </div>
-<p>wait a few minutes and the installtion will be automatically completed
+<p>Wait a few minutes and the installtion will be automatically completed
 </p>
+<p>After this we pretty much done. now just type the following given command anywhere in the terminal to open the powershell.
+</p>
+  <pre>
+    pwsh</pre>
+<b>Optional step :</b>
+<p>As we can be very forgetful i just created little OpenPWSH.sh command to keep reminding even when you offline. trust me forgetting happens alot.</p>
+  <pre>
+    ./OpenPWSH.sh</pre>
 
 <h2>Manual installation</h2>
 
