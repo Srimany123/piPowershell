@@ -30,5 +30,16 @@ To begin with manual installation
   
   <pre>
     sudo apt update && sudo apt upgrade</pre>
-  after we completed upgrading,</pre>
+  after we completed upgrading,
+  <pre>
+    sudo apt install wget libssl1.1 libunwind8
+    sudo chmod +x *
+    sudo mkdir -p /opt/microsoft/powershell/7
+    echo "incase of 64 bit un comment the arm64 and comment the arm32."
+    wget -O /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.2.6/powershell-7.2.6-linux-arm32.tar.gz 
+    #wget -O /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.2.6/powershell-7.2.6-linux-arm64.tar.gz 
+    sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7
+    sudo chmod +x /opt/microsoft/powershell/7/pwsh
+    sudo ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
+    sudo rm -rf /tmp/powershell.tar.gz
 </div>
