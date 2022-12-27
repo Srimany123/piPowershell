@@ -58,4 +58,6 @@ else if the system is 32 bit then use this command to install.
   <pre>
     sudo rm -rf /tmp/powershell.tar.gz</pre>
 </div>
-if you encounter any errors, mail me to this email : yalavarthisreeman21725@gmail.com
+if you encounter any errors, mail me.
+
+<b>Email :</b> <i>yalavarthisreeman21725@gmail.com</i>
