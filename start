@@ -40,5 +40,10 @@ sound "now that we have downloaded the image, we need to extract the image to th
 sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7
 sound "after extracting the image we have to giev it executable permission to it."
 sudo chmod +x /opt/microsoft/powershell/7/pwsh
+sound "here we link the powershell command to specified word. so that we don't have to come to the directory everytime."
 sudo ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
+clear
+echo "Command : pwsh"
+sound "now that linking is done. we can just type p w s h as shown in terminal to run powershell."
+
 sudo rm -rf /tmp/powershell.tar.gz
