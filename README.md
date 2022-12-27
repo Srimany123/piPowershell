@@ -54,6 +54,8 @@ else if the system is 32 bit then use this command to install.
   After this we are good to go. But wait, we are in fast world where everything is in rush. we don't got time to remember or goto this directory everytime and execute the 'pwsh'. so we simply use the ln -s to link the word to use it from anywhere by simply typing 'pwsh' in anywhere. to do that we use the following command
   <pre>
     sudo ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh</pre>
+  We are done with the total process so we don't actually have no use of the powershell image file. Also space is something which is very crucial in mini computers or virtual devices. so my preferred choice is to remove the powershell image file as it is no longer useful."
   <pre>
     sudo rm -rf /tmp/powershell.tar.gz</pre>
 </div>
+if you encounter any errors, mail me to this email : yalavarthisreeman21725@gmail.com
