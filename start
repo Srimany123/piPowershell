@@ -45,5 +45,8 @@ sudo ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
 clear
 echo "Command : pwsh"
 sound "now that linking is done. we can just type p w s h as shown in terminal to run powershell."
-
+sound "we are done with the installation of powershell. so we don't need the powershell image file, so here we are removing the image file."
 sudo rm -rf /tmp/powershell.tar.gz
+sound "everything seems to work well, try the P W S H command in the terminal."
+soung "if you are facing any errors send a message to my email."
+echo "yalavarthisreeman21725@gmail.com"
