@@ -1,10 +1,44 @@
+#!/usr/bin/sh
+opt=$1
+
+print(){
+if [ "$opt" = "-s" ] || [ "$opt" = "-sd" ] || [ "$opt" = "-ds" ]; then
+espeak -ven+f3 -p20 -k20 -s160 -a70 "$1" 2>/dev/null
+fi
+if [ "$opt" = "-d" ] || [ "$opt" = "-sd" ] || [ "$opt" = "-ds" ]; then
+echo $1
+fi
+}
+
+sound(){
+if [ "$opt" = "-s" ] || [ "$opt" = "-sd" ] || [ "$opt" = "-ds" ]; then
+espeak -ven+f3 -p20 -k20 -s160 -a70 "$1" 2>/dev/null
+fi
+}
+if [ "$opt" = "-s" ] || [ "$opt" = "-sd" ] || [ "$opt" = "-ds" ]; then
+sudo apt-get install python-dev
+sudo apt-get install espeak python-espeak
+fi
+
+sound "Hi. this is espeak engine. today we going to install the website change detection tool. Firstly we need to update and upgrade."
+sudo apt update && sudo apt upgrade
+sound "System has been succesfully upgraded. Now we need to install some necessary libraries."
 sudo apt install wget libssl1.1 libunwind8
+sound "Neede libraries are installed. Now we give executable permissions."
 sudo chmod +x *
+sound "we are going to make a directory at opt slash microsoft slash powershell slash 7"
 sudo mkdir -p /opt/microsoft/powershell/7
-echo "incase of 64 bit un comment the arm64 and comment the arm32."
-wget -O /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.2.6/powershell-7.2.6-linux-arm32.tar.gz 
-#wget -O /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.2.6/powershell-7.2.6-linux-arm64.tar.gz 
+clear
+sound "To install correct powershell image. Enter your system Architecture correctly 32 or 64."
+read -p "enter your system architecture 32 or 64 : " $arc
+if [[ $arc -eq 64 ]]; then
+wget -O /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.2.6/powershell-7.2.6-linux-arm64.tar.gz 
+else
+wget -O /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.2.6/powershell-7.2.6-linux-arm32.tar.gz
+fi
+sound "now that we have downloaded the image, we need to extract the image to the powershell slash 7 directory."
 sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7
+sound "after extracting the image we have to giev it executable permission to it."
 sudo chmod +x /opt/microsoft/powershell/7/pwsh
 sudo ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
 sudo rm -rf /tmp/powershell.tar.gz
