@@ -26,7 +26,7 @@ if you are using this repository for installation. copy the following commands
   <pre>
     pwsh</pre>
 <b>Optional step :</b>
-<p>As we can be very forgetful i just created little OpenPWSH.sh command to keep reminding even when you offline. trust me forgetting happens alot.</p>
+<p>As we can be very forgetful i just created little OpenPWSH.sh script to keep reminding even when you offline. trust me forgetting happens alot.</p>
   <pre>
     ./OpenPWSH.sh</pre>
 
