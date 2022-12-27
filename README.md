@@ -30,16 +30,29 @@ To begin with manual installation
   
   <pre>
     sudo apt update && sudo apt upgrade</pre>
-  after we completed upgrading,
+  after we completed upgrading, Now we need to install some necessary libraries.
   <pre>
-    sudo apt install wget libssl1.1 libunwind8
+    sudo apt install wget libssl1.1 libunwind8</pre>
+  Neede libraries are installed. Now we give executable permissions.
     sudo chmod +x *
-    sudo mkdir -p /opt/microsoft/powershell/7
-    echo "incase of 64 bit un comment the arm64 and comment the arm32."
-    wget -O /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.2.6/powershell-7.2.6-linux-arm32.tar.gz 
-    #wget -O /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.2.6/powershell-7.2.6-linux-arm64.tar.gz 
-    sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7
-    sudo chmod +x /opt/microsoft/powershell/7/pwsh
-    sudo ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
-    sudo rm -rf /tmp/powershell.tar.gz
+  We are going to make a directory at opt/microsoft/powershell/7
+  <pre>
+    sudo mkdir -p /opt/microsoft/powershell/7</pre>
+  By this we are ready to install image, here we have to install the correct image which is used for system, if the system is 64 bit use the foloowing commands to download the image.
+  <pre>
+    wget -O /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.2.6/powershell-7.2.6-linux-arm64.tar.gz</pre>
+else if the system is 32 bit then use this command to install.
+  <pre>
+    wget -O /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.2.6/powershell-7.2.6-linux-arm32.tar.gz</pre> 
+  By far we have downloaded and steup the environment, now we need to extract the image file.
+  <pre>
+    sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7</pre>
+  After the extraction we have to give it executable permission
+  <pre>
+    sudo chmod +x /opt/microsoft/powershell/7/pwsh</pre>
+  After this we are good to go. But wait, we are in fast world where everything is in rush. we don't got time to remember or goto this directory everytime and execute the 'pwsh'. so we simply use the ln -s to link the word to use it from anywhere by simply typing 'pwsh' in anywhere. to do that we use the following command
+  <pre>
+    sudo ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh</pre>
+  <pre>
+    sudo rm -rf /tmp/powershell.tar.gz</pre>
 </div>
