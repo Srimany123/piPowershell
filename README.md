@@ -8,7 +8,8 @@ if you are using this repository for installation. copy the following commands
 <div>
   <pre>
     cd ~
-    sudo git clone https://github.com/Srimany123/piPoershell.git</pre>
+    sudo git clone https://github.com/Srimany123/piPowershell.git
+    cd piPowershell</pre>
   
   if you want audio acknowledgement of key installation names and updates of progress, then use this command : 
   
