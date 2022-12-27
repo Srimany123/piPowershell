@@ -49,4 +49,4 @@ sound "we are done with the installation of powershell. so we don't need the pow
 sudo rm -rf /tmp/powershell.tar.gz
 sound "everything seems to work well, try the P W S H command in the terminal."
 soung "if you are facing any errors send a message to my email."
-echo "yalavarthisreeman21725@gmail.com"
+echo "Email address : yalavarthisreeman21725@gmail.com"
